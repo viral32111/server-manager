@@ -640,7 +640,7 @@ function createManagementWindow() {
 			$editPasswordPolicyTextBox.Height = 93;
 
 			# Set the text to the raw password policy information and disable user interaction
-			$editPasswordPolicyTextBox.Text = ( Get-ADDefaultDomainPasswordPolicy -Identity mercury.local | Select-Object @{N='Needs Complexity';E={$_.ComplexityEnabled}}, @{N='Lockout Duration';E={$_.LockoutDuration}}, @{N='Minimum Age';E={$_.MinPasswordAge}}, @{N='Maximum Age';E={$_.MaxPasswordAge}}, @{N='Minimum Length';E={$_.MinPasswordLength}}, @{N='History Count';E={$_.PasswordHistoryCount}} | Out-String ).Trim();
+			$editPasswordPolicyTextBox.Text = ( Get-ADDefaultDomainPasswordPolicy -Identity $domainName | Select-Object @{N='Needs Complexity';E={$_.ComplexityEnabled}}, @{N='Lockout Duration';E={$_.LockoutDuration}}, @{N='Minimum Age';E={$_.MinPasswordAge}}, @{N='Maximum Age';E={$_.MaxPasswordAge}}, @{N='Minimum Length';E={$_.MinPasswordLength}}, @{N='History Count';E={$_.PasswordHistoryCount}} | Out-String ).Trim();
 			$editPasswordPolicyTextBox.ReadOnly = $true;
 
 			# Make the background color white (needed because making it read-only changes the background color)
