@@ -8,13 +8,15 @@ Yes, the 1000+ lines of code is within a single PowerShell script. Yes, I know t
 
 Ignore [the experiments directory](/experiments/), it just contains the code I made while learning PowerShell.
 
+![Screenshot](/screenshots/active-directory/create-new-user.png)
+
 ## Features
 
-* Login - Protection against unauthorized access.
-* Server Status - Check if the server is online via ICMP ping.
-* Service Status - Check if the DNS, DHCP and ADDS (Active Directory) services are running.
-* User Management - Create & update Active Directory users.
-* Bulk Import - Import users into Active Directory from [a comma-separated values file](/active-directory-bulk-user-import.csv).
+* [Authentication](/screenshots/authentication.png) - Protection against unauthorized access using Active Directory credentials.
+* [Server Status](/screenshots/status/server.png) - Check if the server is online via ICMP ping.
+* [Service Status](/screenshots/status/services.png) - Check if the DNS, DHCP and ADDS (Active Directory) services are running.
+* [User Management](/screenshots/active-directory/edit-user-groups.png) - [Create](/screenshots/active-directory/create-new-user.png) & [update](/screenshots/active-directory/edit-user-password.png) Active Directory users.
+* [Bulk Import](/screenshots/active-directory/bulk-import-users.png) - Import users into Active Directory from [a comma-separated values file](/active-directory-bulk-user-import.csv).
 
 ## Usage
 
